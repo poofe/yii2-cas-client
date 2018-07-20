@@ -1,5 +1,5 @@
 {
-    "name": "jonas-huang/yii2casclient",
+    "name": "jonas-huang/yii2-cas-client",
     "description": "CAS authentication for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii", "yii2", "authentication", "CAS"],
