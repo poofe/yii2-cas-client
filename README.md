@@ -7,7 +7,7 @@ using the library [phpCAS](https://wiki.jasig.org/display/CASC/phpCAS).
 Usage
 -----
 
-1. Add this to the project with `composer require jonashuang/yii2-cas-client`
+1. Add this to the project with `composer require jonashuang/yii2casclient`
 
 2. Configure the Yii2 application, e.g. in `backend/config/main.php` :
 
