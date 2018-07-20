@@ -13,6 +13,7 @@
             "jonashuang\\yii2casclient\\cas\\" : "src"
         }
     },
+    "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
