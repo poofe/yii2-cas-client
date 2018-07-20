@@ -1,5 +1,5 @@
 {
-    "name": "silecs/yii2-auth-cas",
+    "name": "Jonas-Huang/yii2-cas-client",
     "description": "CAS authentication for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii", "yii2", "authentication", "CAS"],
@@ -10,14 +10,14 @@
     },
     "autoload": {
         "psr-4": {
-            "silecs\\yii2auth\\cas\\" : "src"
+            "jonashuang\\yii2casclient\\cas\\" : "src"
         }
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "François Gannaz",
-            "email": "francois.gannaz@silecs.info"
+            "name": "Jonas Huang",
+            "email": "1390580968@qq.com"
         }
     ]
 }

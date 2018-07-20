@@ -4,7 +4,7 @@
  * @license MIT License
  */
 
-namespace silecs\yii2auth\cas;
+namespace jonashuang\yii2casclient\cas;
 
 use phpCAS;
 use Yii;
@@ -13,7 +13,7 @@ use yii\helpers\Url;
 /**
  * Wrapper on phpCAS
  *
- * @author François Gannaz <francois.gannaz@silecs.info>
+ * @author François Gannaz <francois.gannaz@jonashuang.info>
  */
 class CasService extends \yii\base\Object
 {

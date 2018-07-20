@@ -7,22 +7,26 @@ using the library [phpCAS](https://wiki.jasig.org/display/CASC/phpCAS).
 Usage
 -----
 
-1. Add this to the project with `composer require silecs/yii2-auth-cas`
+1. Add this to the project with `composer require jonashuang/yii2-auth-cas`
 
 2. Configure the Yii2 application, e.g. in `backend/config/main.php` :
 
     ```
     return [
         ...
+        'session' => [
+            'class' => 'jonashuang\yii2casclient\cas\Session',
+            ...
+        ],
         'modules' => [
             'cas' => [
-                'class' => 'silecs\yii2auth\cas\CasModule',
+                'class' => 'jonashuang\yii2casclient\cas\CasModule',
                 'config' => [
                     'host' => 'ssoserver.example.com',
                     'port' => '443',
                     'path' => '/idp/profile/cas',
                     // optional parameters
-                    'certfile' => '', // empty, or path to a SSL cert, or false to ignore certs
+                    'certfile' => false, // empty, or path to a SSL cert, or false to ignore certs
                     'debug' => true, // will add many logs into X/runtime/logs/cas.log
                 ],
             ],

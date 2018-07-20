@@ -4,7 +4,7 @@
  * Date: 2018/7/20
  */
 
-namespace silecs\yii2auth\cas;
+namespace jonashuang\yii2casclient\cas;
 
 
 class Session extends \yii\web\Session
