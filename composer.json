@@ -1,5 +1,5 @@
 {
-    "name": "jonas/yii2-cas-client",
+    "name": "pofe/yii2-cas-client",
     "description": "CAS authentication for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii", "yii2", "authentication", "CAS"],
@@ -10,14 +10,14 @@
     },
     "autoload": {
         "psr-4": {
-            "jonas\\yii2casclient\\cas\\" : "src"
+            "pofe\\yii2casclient\\cas\\" : "src"
         }
     },
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jonas Huang",
+            "name": "pofe Huang",
             "email": "1390580968@qq.com"
         }
     ]
