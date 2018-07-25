@@ -7,7 +7,7 @@ using the library [phpCAS](https://wiki.jasig.org/display/CASC/phpCAS).
 Usage
 -----
 
-1. Add this to the project with `composer require jonashuang/yii2casclient`
+1. Add this to the project with `composer require jonas/yii2casclient`
 
 2. Configure the Yii2 application, e.g. in `backend/config/main.php` :
 
@@ -15,12 +15,12 @@ Usage
     return [
         ...
         'session' => [
-            'class' => 'jonashuang\yii2casclient\cas\Session',
+            'class' => 'jonas\yii2casclient\cas\Session',
             ...
         ],
         'modules' => [
             'cas' => [
-                'class' => 'jonashuang\yii2casclient\cas\CasModule',
+                'class' => 'jonas\yii2casclient\cas\CasModule',
                 'config' => [
                     'host' => 'ssoserver.example.com',
                     'port' => '443',

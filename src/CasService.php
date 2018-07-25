@@ -4,7 +4,7 @@
  * @license MIT License
  */
 
-namespace jonashuang\yii2casclient\cas;
+namespace jonas\yii2casclient\cas;
 
 use phpCAS;
 use Yii;
@@ -13,7 +13,7 @@ use yii\helpers\Url;
 /**
  * Wrapper on phpCAS
  *
- * @author François Gannaz <francois.gannaz@jonashuang.info>
+ * @author François Gannaz <francois.gannaz@jonas.info>
  */
 class CasService extends \yii\base\Object
 {

@@ -1,5 +1,5 @@
 {
-    "name": "jonashuang/yii2-cas-client",
+    "name": "jonas/yii2-cas-client",
     "description": "CAS authentication for Yii2",
     "type": "yii2-extension",
     "keywords": ["yii", "yii2", "authentication", "CAS"],
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "jonashuang\\yii2casclient\\cas\\" : "src"
+            "jonas\\yii2casclient\\cas\\" : "src"
         }
     },
     "minimum-stability": "dev",
