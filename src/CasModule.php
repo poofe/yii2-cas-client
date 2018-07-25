@@ -4,12 +4,12 @@
  * @license MIT License
  */
 
-namespace pofe\yii2casclient\cas;
+namespace poofe\yii2casclient\cas;
 
 /**
  * A Yii2 Module that will handle the HTTP query of the CAS server.
  *
- * @author François Gannaz <francois.gannaz@pofe.info>
+ * @author François Gannaz <francois.gannaz@poofe.info>
  */
 class CasModule extends \yii\base\Module
 {
@@ -21,7 +21,7 @@ class CasModule extends \yii\base\Module
     /**
      * @var string
      */
-    public $controllerNamespace = 'pofe\yii2casclient\cas\controllers';
+    public $controllerNamespace = 'poofe\yii2casclient\cas\controllers';
 
     /**
      * @var CasService

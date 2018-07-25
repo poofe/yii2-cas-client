@@ -1,10 +1,10 @@
 <?php
 /**
- * Author: pofe.Huang <pofe.huang@qq.com>
+ * Author: poofe.Huang <poofe.huang@qq.com>
  * Date: 2018/7/20
  */
 
-namespace pofe\yii2casclient\cas;
+namespace poofe\yii2casclient\cas;
 
 
 class Session extends \yii\web\Session

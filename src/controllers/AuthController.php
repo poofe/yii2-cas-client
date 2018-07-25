@@ -4,7 +4,7 @@
  * @license MIT License
  */
 
-namespace pofe\yii2casclient\cas\controllers;
+namespace poofe\yii2casclient\cas\controllers;
 
 use Yii;
 use yii\helpers\Url;
@@ -16,7 +16,7 @@ use yii\helpers\Url;
  * where "cas" is the key in the configuration file of the Yii2 application
  * `"modules" => ['cas' => ...]`.
  *
- * @author François Gannaz <francois.gannaz@pofe.info>
+ * @author François Gannaz <francois.gannaz@poofe.info>
  */
 class AuthController extends \yii\web\Controller
 {
