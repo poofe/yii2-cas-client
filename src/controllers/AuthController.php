@@ -22,16 +22,21 @@ class AuthController extends \yii\web\Controller
 {
     public function actionLogin()
     {
-        $this->module->casService->forceAuthentication();
-        $username = $this->module->casService->getUsername();
-        if ($username) {
-            $userClass = Yii::$app->user->identityClass;
-            $user = $userClass::findIdentity($username);
-            if ($user) {
-                Yii::$app->user->login($user);
-            } else {
-                throw new \yii\web\HttpException(403, "This user has no access to the application.");
+        try {
+            $this->module->casService->forceAuthentication();
+            $username = $this->module->casService->getUsername();
+            if ($username) {
+                $userClass = Yii::$app->user->identityClass;
+                $user = $userClass::findIdentity($username);
+                if ($user) {
+                    Yii::$app->user->login($user);
+                } else {
+                    throw new \yii\web\HttpException(403, "This user has no access to the application.");
+                }
             }
+        } catch (\Exception $exception) {
+            \Yii::debug($exception->getMessage());
+            $this->redirect(Url::to(['auth/login']));
         }
         return $this->goBack();
     }
@@ -39,20 +44,24 @@ class AuthController extends \yii\web\Controller
     public function actionLogout()
     {
         //CAS注销通知
-        if (strpos($_SERVER['QUERY_STRING'],'ticket=') !== false) {
-            $ticket = substr($_SERVER['QUERY_STRING'], strpos($_SERVER['QUERY_STRING'],'ticket=')+7);
+        if (strpos($_SERVER['QUERY_STRING'], 'ticket=') !== false) {
+            $ticket = substr($_SERVER['QUERY_STRING'], strpos($_SERVER['QUERY_STRING'], 'ticket=') + 7);
             $session_id = preg_replace('/[^a-zA-Z0-9\-]/', '', $ticket);
-            $session_file = \Yii::$app->session->getSavePath().'/sess_'.$session_id;
+            $session_file = \Yii::$app->session->getSavePath() . '/sess_' . $session_id;
             @unlink($session_file);
             return true;
         }
-        \phpCAS::handleLogoutRequests(false);
-        //当前站点注销
-        $this->module->casService->logout(Url::home(true));
-        if (!Yii::$app->getUser()->isGuest) {
-            Yii::$app->getUser()->logout(true);
+        try {
+            //当前站点注销
+            $this->module->casService->logout(Url::home(true));
+            if (!Yii::$app->getUser()->isGuest) {
+                Yii::$app->getUser()->logout(true);
+            }
+            // In case the logout fails (not authenticated)
+        } catch (\Exception $exception) {
+
         }
-        // In case the logout fails (not authenticated)
+        \phpCAS::handleLogoutRequests(false);
         return $this->redirect(Url::home(true));
     }
 }
